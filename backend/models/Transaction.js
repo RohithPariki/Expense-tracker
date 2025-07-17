@@ -15,12 +15,20 @@ const transactionSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide a category"],
       enum: [
+        // Expense categories
         "food",
-        "transport",
+        "transport", 
         "entertainment",
         "utilities",
+        "shopping",
+        "healthcare",
+        // Income categories
         "salary",
         "freelance",
+        "business",
+        "investment",
+        "bonus",
+        // General
         "other",
       ],
     },

@@ -1,1 +1,310 @@
 @import "tailwindcss";
+
+/* Base light mode styles */
+body:not(.dark), html:not(.dark) {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Light mode container styles */
+body:not(.dark) .bg-white,
+html:not(.dark) .bg-white {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Light mode gradient backgrounds */
+body:not(.dark) .bg-gradient-to-br {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+/* Light mode text colors - MUCH DARKER for better visibility */
+body:not(.dark) .text-slate-700,
+body:not(.dark) .text-slate-800,
+body:not(.dark) .text-slate-900 {
+  color: #0f172a !important;
+}
+
+/* Light mode blue text colors - DARKER */
+body:not(.dark) .text-blue-700 {
+  color: #1e40af !important;
+}
+
+body:not(.dark) .text-blue-900 {
+  color: #1e3a8a !important;
+}
+
+body:not(.dark) .text-blue-600 {
+  color: #2563eb !important;
+}
+
+/* Light mode border colors */
+body:not(.dark) .border-slate-300 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Light mode card backgrounds */
+body:not(.dark) .bg-slate-800,
+body:not(.dark) .bg-slate-700 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Light mode input backgrounds */
+body:not(.dark) input,
+body:not(.dark) select,
+body:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+body:not(.dark) input::placeholder,
+body:not(.dark) select::placeholder,
+body:not(.dark) textarea::placeholder {
+  color: #475569 !important;
+}
+
+/* Light mode button colors */
+body:not(.dark) .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+body:not(.dark) .hover\:bg-blue-700:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Container shadow for both modes */
+.shadow-lg, .shadow-xl, .rounded-2xl, .rounded-3xl, .container-shadow {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.shadow-lg:hover, .shadow-xl:hover, .rounded-2xl:hover, .rounded-3xl:hover, .container-shadow-hover:hover {
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Dark mode shadows */
+body.dark .shadow-lg, body.dark .shadow-xl, body.dark .rounded-2xl, body.dark .rounded-3xl, body.dark .container-shadow {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark .shadow-lg:hover, body.dark .shadow-xl:hover, body.dark .rounded-2xl:hover, body.dark .rounded-3xl:hover, body.dark .container-shadow-hover:hover {
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.4), 0 8px 12px -4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Modern font stack */
+body {
+  font-family: 'Inter', 'Nunito', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus styles */
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Hover elevation for cards */
+.hover\:shadow-xl:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Light mode specific improvements - DARKER COLORS */
+body:not(.dark) .bg-gradient-to-br.from-white.to-slate-50 {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+body:not(.dark) .bg-slate-100 {
+  background-color: #f1f5f9 !important;
+}
+
+body:not(.dark) .text-slate-600 {
+  color: #334155 !important;
+}
+
+body:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+body:not(.dark) .border-slate-200 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Light mode card improvements */
+body:not(.dark) .bg-white.dark\:bg-slate-800 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Light mode button improvements */
+body:not(.dark) .bg-blue-600.dark\:bg-\[#3b82f6\] {
+  background-color: #2563eb !important;
+}
+
+body:not(.dark) .hover\:bg-blue-700.dark:hover\:bg-\[#2563eb\] {
+  background-color: #1d4ed8 !important;
+}
+
+/* Light mode form improvements */
+body:not(.dark) .bg-white.dark\:bg-slate-700 {
+  background-color: #ffffff !important;
+}
+
+body:not(.dark) .border-slate-300.dark\:border-slate-600 {
+  border-color: #cbd5e1 !important;
+}
+
+body:not(.dark) .text-slate-800.dark\:text-slate-200 {
+  color: #0f172a !important;
+}
+
+body:not(.dark) .text-slate-700.dark\:text-slate-300 {
+  color: #1e293b !important;
+}
+
+/* Light mode chart improvements */
+body:not(.dark) .bg-slate-100.dark\:bg-slate-800 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Light mode filter improvements - DARKER COLORS */
+body:not(.dark) .bg-pink-100 {
+  background-color: #fdf2f8 !important;
+}
+
+body:not(.dark) .bg-blue-100 {
+  background-color: #eff6ff !important;
+}
+
+body:not(.dark) .bg-purple-100 {
+  background-color: #faf5ff !important;
+}
+
+body:not(.dark) .bg-yellow-100 {
+  background-color: #fefce8 !important;
+}
+
+body:not(.dark) .bg-green-100 {
+  background-color: #f0fdf4 !important;
+}
+
+body:not(.dark) .bg-red-100 {
+  background-color: #fef2f2 !important;
+}
+
+body:not(.dark) .bg-emerald-100 {
+  background-color: #ecfdf5 !important;
+}
+
+body:not(.dark) .bg-indigo-100 {
+  background-color: #eef2ff !important;
+}
+
+body:not(.dark) .bg-cyan-100 {
+  background-color: #ecfeff !important;
+}
+
+body:not(.dark) .bg-orange-100 {
+  background-color: #fff7ed !important;
+}
+
+body:not(.dark) .bg-rose-100 {
+  background-color: #fff1f2 !important;
+}
+
+/* Light mode text color overrides for better visibility */
+body:not(.dark) .text-pink-800 {
+  color: #9d174d !important;
+}
+
+body:not(.dark) .text-blue-800 {
+  color: #1e40af !important;
+}
+
+body:not(.dark) .text-purple-800 {
+  color: #6b21a8 !important;
+}
+
+body:not(.dark) .text-yellow-800 {
+  color: #92400e !important;
+}
+
+body:not(.dark) .text-green-800 {
+  color: #166534 !important;
+}
+
+body:not(.dark) .text-red-800 {
+  color: #991b1b !important;
+}
+
+body:not(.dark) .text-emerald-800 {
+  color: #065f46 !important;
+}
+
+body:not(.dark) .text-indigo-800 {
+  color: #3730a3 !important;
+}
+
+body:not(.dark) .text-cyan-800 {
+  color: #155e75 !important;
+}
+
+body:not(.dark) .text-orange-800 {
+  color: #9a3412 !important;
+}
+
+body:not(.dark) .text-rose-800 {
+  color: #9f1239 !important;
+}
+
+body:not(.dark) .text-slate-800 {
+  color: #1e293b !important;
+}
+
+/* Light mode summary text colors */
+body:not(.dark) .text-green-700 {
+  color: #15803d !important;
+}
+
+body:not(.dark) .text-green-900 {
+  color: #14532d !important;
+}
+
+body:not(.dark) .text-red-700 {
+  color: #b91c1c !important;
+}
+
+body:not(.dark) .text-red-900 {
+  color: #7f1d1d !important;
+}
+
+body:not(.dark) .text-purple-700 {
+  color: #7c3aed !important;
+}
+
+body:not(.dark) .text-purple-900 {
+  color: #581c87 !important;
+}
+
+body:not(.dark) .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+body:not(.dark) .text-blue-900 {
+  color: #1e3a8a !important;
+}
